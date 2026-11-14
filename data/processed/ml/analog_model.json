@@ -1,0 +1,204 @@
+{
+  "format_version": 1,
+  "metric": "euclidean",
+  "feature_names": [
+    "slope_median_deg",
+    "relief_p90_p10_m",
+    "roughness_local_std_m",
+    "steep_fraction_15deg"
+  ],
+  "earth_patches": [
+    {
+      "profile_id": "earth_arctic_28_30_60km_v1",
+      "features": {
+        "slope_median_deg": 1.894742220184288,
+        "relief_p90_p10_m": 323.4714064917255,
+        "roughness_local_std_m": 28.49051960945248,
+        "steep_fraction_15deg": 0.0
+      },
+      "location_name": "ArcticDEM search candidate 28_30",
+      "latitude": 75.01268271051367,
+      "longitude": -85.0302592718897
+    },
+    {
+      "profile_id": "earth_arctic_29_25_60km_v1",
+      "features": {
+        "slope_median_deg": 0.3131681891545944,
+        "relief_p90_p10_m": 73.42472182112866,
+        "roughness_local_std_m": 5.10686423109186,
+        "steep_fraction_15deg": 0.0
+      },
+      "location_name": "ArcticDEM search candidate 29_25",
+      "latitude": 72.31936845390412,
+      "longitude": -98.42696902148067
+    },
+    {
+      "profile_id": "earth_lava_beds_60km_v1",
+      "features": {
+        "slope_median_deg": 1.2574884083984497,
+        "relief_p90_p10_m": 525.0454701276165,
+        "roughness_local_std_m": 20.419330959637072,
+        "steep_fraction_15deg": 0.0
+      },
+      "location_name": "Lava Beds volcanic/cave-region study ROI",
+      "latitude": 41.5,
+      "longitude": -121.5
+    },
+    {
+      "profile_id": "earth_n13e040_60km_v1",
+      "features": {
+        "slope_median_deg": 0.889556710739407,
+        "relief_p90_p10_m": 349.1601554679503,
+        "roughness_local_std_m": 13.25246036127717,
+        "steep_fraction_15deg": 0.0011890606420927466
+      },
+      "location_name": "Afar-area exploratory ROI",
+      "latitude": 13.5,
+      "longitude": 40.5
+    },
+    {
+      "profile_id": "earth_n22e058_60km_v1",
+      "features": {
+        "slope_median_deg": 0.4461022941284296,
+        "relief_p90_p10_m": 192.38579992735043,
+        "roughness_local_std_m": 7.335986280976929,
+        "steep_fraction_15deg": 0.0
+      },
+      "location_name": "Oman exploratory ROI",
+      "latitude": 22.5,
+      "longitude": 58.5
+    },
+    {
+      "profile_id": "earth_n24e010_60km_v1",
+      "features": {
+        "slope_median_deg": 1.6044910491373425,
+        "relief_p90_p10_m": 322.4005779975396,
+        "roughness_local_std_m": 28.008621963330175,
+        "steep_fraction_15deg": 0.0
+      },
+      "location_name": "Central Sahara exploratory ROI",
+      "latitude": 24.5,
+      "longitude": 10.5
+    },
+    {
+      "profile_id": "earth_n25e040_60km_v1",
+      "features": {
+        "slope_median_deg": 0.46573461037268993,
+        "relief_p90_p10_m": 124.20241743949805,
+        "roughness_local_std_m": 7.251940560036049,
+        "steep_fraction_15deg": 0.0
+      },
+      "location_name": "Saudi Arabia exploratory ROI",
+      "latitude": 25.5,
+      "longitude": 40.5
+    },
+    {
+      "profile_id": "earth_n34w116_60km_v1",
+      "features": {
+        "slope_median_deg": 1.807242717364224,
+        "relief_p90_p10_m": 712.5688717341692,
+        "roughness_local_std_m": 27.12915918236606,
+        "steep_fraction_15deg": 0.0
+      },
+      "location_name": "Mojave-area exploratory ROI",
+      "latitude": 34.5,
+      "longitude": -115.5
+    },
+    {
+      "profile_id": "earth_n36w117_60km_v1",
+      "features": {
+        "slope_median_deg": 1.6581225710490757,
+        "relief_p90_p10_m": 525.9304645945928,
+        "roughness_local_std_m": 27.688895107200295,
+        "steep_fraction_15deg": 0.01615798922800718
+      },
+      "location_name": "Death Valley-area tile-centered ROI",
+      "latitude": 36.5,
+      "longitude": -116.5
+    },
+    {
+      "profile_id": "earth_n37e095_60km_v1",
+      "features": {
+        "slope_median_deg": 1.604074416832054,
+        "relief_p90_p10_m": 907.1152646832684,
+        "roughness_local_std_m": 24.41753044671074,
+        "steep_fraction_15deg": 0.015408320493066256
+      },
+      "location_name": "Qaidam-area exploratory ROI",
+      "latitude": 37.5,
+      "longitude": 95.5
+    },
+    {
+      "profile_id": "earth_rema_18_35_60km_v1",
+      "features": {
+        "slope_median_deg": 1.7039117804405823,
+        "relief_p90_p10_m": 1073.6063014381434,
+        "roughness_local_std_m": 27.11571018513014,
+        "steep_fraction_15deg": 0.05083234244946492
+      },
+      "location_name": "Antarctic REMA 18_35 tile-centered polar ROI",
+      "latitude": -77.81689181335317,
+      "longitude": 160.20112364547506
+    },
+    {
+      "profile_id": "earth_s20w068_60km_v1",
+      "features": {
+        "slope_median_deg": 0.3903910427299681,
+        "relief_p90_p10_m": 208.96999435212138,
+        "roughness_local_std_m": 6.676436152386555,
+        "steep_fraction_15deg": 0.0015842839036755386
+      },
+      "location_name": "Altiplano-area exploratory ROI",
+      "latitude": -19.5,
+      "longitude": -67.5
+    },
+    {
+      "profile_id": "earth_s24w069_60km_v1",
+      "features": {
+        "slope_median_deg": 1.0035066735711586,
+        "relief_p90_p10_m": 665.3091512131859,
+        "roughness_local_std_m": 16.752549654932583,
+        "steep_fraction_15deg": 0.0
+      },
+      "location_name": "Atacama-area exploratory ROI",
+      "latitude": -23.5,
+      "longitude": -68.5
+    },
+    {
+      "profile_id": "earth_s25e015_60km_v1",
+      "features": {
+        "slope_median_deg": 0.9231806079985594,
+        "relief_p90_p10_m": 310.2870465720314,
+        "roughness_local_std_m": 17.548638729945168,
+        "steep_fraction_15deg": 0.0
+      },
+      "location_name": "Namib-area exploratory ROI",
+      "latitude": -24.5,
+      "longitude": 15.5
+    },
+    {
+      "profile_id": "earth_s25e135_60km_v1",
+      "features": {
+        "slope_median_deg": 0.07432110139135562,
+        "relief_p90_p10_m": 49.40472868603206,
+        "roughness_local_std_m": 1.0948720978174467,
+        "steep_fraction_15deg": 0.0
+      },
+      "location_name": "Central Australia exploratory ROI",
+      "latitude": -24.5,
+      "longitude": 135.5
+    }
+  ],
+  "scaler_mean": [
+    1.0690689595661453,
+    424.21882483642355,
+    17.219301034819384,
+    0.005678133114420444
+  ],
+  "scaler_scale": [
+    0.6009145919560225,
+    295.4585642305455,
+    9.459428380580084,
+    0.013172521603527462
+  ]
+}

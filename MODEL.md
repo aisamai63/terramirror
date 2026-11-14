@@ -3,7 +3,8 @@
 Use **StandardScaler + cosine similarity** as the README's baseline. This is
 unsupervised analog retrieval: no classifier labels or pretrained weights are
 required. `src/model.py` implements fitting on Earth reference patches and ranking
-them against a planetary target. The other three source modules remain placeholders.
+them against a planetary target. The ingestion module remains a placeholder;
+the latest team feature-engineering and API implementations are preserved.
 The supplied processed data now supports an operational regional terrain model.
 
 Cosine compares direction and ignores magnitude, so a high score does not guarantee
@@ -21,7 +22,7 @@ From the project root in PowerShell:
 uv venv --python 3.11 .venv
 uv pip install --python .venv\Scripts\python.exe -r requirements-ml.lock
 .venv\Scripts\python.exe -m src.prepare_model
-.venv\Scripts\python.exe -m unittest discover -s tests -v
+.venv\Scripts\python.exe -m pytest tests -q
 ```
 
 `requirements-ml.txt` lists direct ML dependencies; `requirements-ml.lock` captures
@@ -150,4 +151,4 @@ evidence that it improves on these baselines.
 References: [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html),
 [cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html).
 
-Run checks with `python -m unittest discover -s tests -v`.
+Run all checks with `python -m pytest tests -q` (26 tests in this integrated snapshot).

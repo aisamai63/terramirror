@@ -1,0 +1,125 @@
+{
+  "target_site": "Mare Tranquillitatis pit-region 60 km study",
+  "timestamp": "2026-11-14",
+  "top_analogs": [
+    {
+      "rank": 1,
+      "location_name": "ArcticDEM search candidate 29_25",
+      "profile_id": "earth_arctic_29_25_60km_v1",
+      "latitude": 72.31936845390412,
+      "longitude": -98.42696902148067,
+      "similarity_score": 0.7854520502522273,
+      "metrics": {
+        "slope_match": 0.9587515632436017,
+        "relief_match": 0.9411676180805945,
+        "roughness_match": 0.9216256695357532,
+        "steep_fraction_match": 0.8011294497619126
+      },
+      "caveats": "Moon gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. Orbital pit/conduit evidence is separate from kilometre-scale terrain. Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.",
+      "source_ids": [
+        "ARCTICDEM_29_25_32M",
+        "ARCTICDEM_29_25_32M_DATAMASK",
+        "ARCTICDEM_29_25_32M_MASK_UINT8"
+      ]
+    },
+    {
+      "rank": 2,
+      "location_name": "Saudi Arabia exploratory ROI",
+      "profile_id": "earth_n25e040_60km_v1",
+      "latitude": 25.5,
+      "longitude": 40.5,
+      "similarity_score": 0.6627429119495848,
+      "metrics": {
+        "slope_match": 0.7710614888086114,
+        "relief_match": 0.9014282458533192,
+        "roughness_match": 0.7623083180250335,
+        "steep_fraction_match": 0.8011294497619126
+      },
+      "caveats": "Moon gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. Orbital pit/conduit evidence is separate from kilometre-scale terrain. Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.",
+      "source_ids": [
+        "NASADEM_N25E040_HGT",
+        "NASADEM_N25E040_NUM",
+        "NASADEM_N25E040_SWB"
+      ]
+    },
+    {
+      "rank": 3,
+      "location_name": "Altiplano-area exploratory ROI",
+      "profile_id": "earth_s20w068_60km_v1",
+      "latitude": -19.5,
+      "longitude": -67.5,
+      "similarity_score": 0.6598237149705901,
+      "metrics": {
+        "slope_match": 0.853583216232334,
+        "relief_match": 0.7162028969051775,
+        "roughness_match": 0.7993822742877298,
+        "steep_fraction_match": 0.8865516665625367
+      },
+      "caveats": "Moon gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. Orbital pit/conduit evidence is separate from kilometre-scale terrain. Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.",
+      "source_ids": [
+        "NASADEM_S20W068_HGT",
+        "NASADEM_S20W068_NUM",
+        "NASADEM_S20W068_SWB"
+      ]
+    },
+    {
+      "rank": 4,
+      "location_name": "Central Australia exploratory ROI",
+      "profile_id": "earth_s25e135_60km_v1",
+      "latitude": -24.5,
+      "longitude": 135.5,
+      "similarity_score": 0.6376502323491486,
+      "metrics": {
+        "slope_match": 0.738307316463674,
+        "relief_match": 0.8742731201819208,
+        "roughness_match": 0.746777438681594,
+        "steep_fraction_match": 0.8011294497619126
+      },
+      "caveats": "Moon gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. Orbital pit/conduit evidence is separate from kilometre-scale terrain. Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.",
+      "source_ids": [
+        "NASADEM_S25E135_HGT",
+        "NASADEM_S25E135_NUM",
+        "NASADEM_S25E135_SWB"
+      ]
+    },
+    {
+      "rank": 5,
+      "location_name": "Oman exploratory ROI",
+      "profile_id": "earth_n22e058_60km_v1",
+      "latitude": 22.5,
+      "longitude": 58.5,
+      "similarity_score": 0.6283050041242612,
+      "metrics": {
+        "slope_match": 0.7909873613478852,
+        "relief_match": 0.7462007052420313,
+        "roughness_match": 0.7571799348248186,
+        "steep_fraction_match": 0.8011294497619126
+      },
+      "caveats": "Moon gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. Orbital pit/conduit evidence is separate from kilometre-scale terrain. Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.",
+      "source_ids": [
+        "NASADEM_N22E058_HGT",
+        "NASADEM_N22E058_NUM",
+        "NASADEM_N22E058_SWB"
+      ]
+    }
+  ],
+  "model_metadata": {
+    "metric": "euclidean",
+    "features": [
+      "slope_median_deg",
+      "relief_p90_p10_m",
+      "roughness_local_std_m",
+      "steep_fraction_15deg"
+    ],
+    "input_sha256": {
+      "earth_profiles.parquet": "1077523fc4e3b435e2acd35c350323be97946a1573605d5fe4ee3703e7a9403f",
+      "planetary_profiles.parquet": "894467db7c98c01109f0fbf3ca5476baac938b7e94c690601355886e23bd2b1e"
+    },
+    "target_profile_id": "moon_tranquillitatis_pit_60km_v1",
+    "target_source_ids": [
+      "LOLA_LDEM64_VERIFIED"
+    ],
+    "scientific_suitability_validated": false,
+    "features_outside_earth_range": []
+  }
+}
