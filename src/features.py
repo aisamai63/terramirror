@@ -14,6 +14,47 @@ FEATURE_COLUMNS = [
     "steep_fraction",
 ]
 
+MODEL_FEATURE_COLUMNS = [
+    "slope_median_deg",
+    "relief_p90_p10_m",
+    "roughness_local_std_m",
+    "steep_fraction_15deg",
+]
+
+FEATURE_ALIASES = {
+    "slope_median_deg": "median_slope_deg",
+    "relief_p90_p10_m": "relief_m",
+    "roughness_local_std_m": "roughness_m",
+    "steep_fraction_15deg": "steep_fraction",
+}
+
+
+def _normalize_feature_frame(data: pd.DataFrame) -> pd.DataFrame:
+    """Accept the project's canonical names or the model's legacy feature names."""
+    if not isinstance(data, pd.DataFrame):
+        raise TypeError("Feature data must be provided as a pandas DataFrame.")
+    if data.empty:
+        raise ValueError("Feature data is empty; at least one terrain record is required.")
+
+    available = set(data.columns)
+    if set(FEATURE_COLUMNS).issubset(available):
+        return data.loc[:, FEATURE_COLUMNS].copy()
+
+    if set(MODEL_FEATURE_COLUMNS).issubset(available):
+        renamed = data.rename(columns={name: FEATURE_ALIASES[name] for name in MODEL_FEATURE_COLUMNS if name in data.columns})
+        return renamed.loc[:, FEATURE_COLUMNS].copy()
+
+    missing_canonical = [column for column in FEATURE_COLUMNS if column not in available]
+    missing_model = [column for column in MODEL_FEATURE_COLUMNS if column not in available]
+    if missing_canonical or missing_model:
+        raise ValueError(
+            "Missing required feature columns. Expected canonical columns "
+            f"{FEATURE_COLUMNS} or model columns {MODEL_FEATURE_COLUMNS}. "
+            f"Missing: {sorted(set(missing_canonical + missing_model))}"
+        )
+
+    return data.loc[:, FEATURE_COLUMNS].copy()
+
 
 def _to_float_array(data: Any, *, name: str) -> np.ndarray:
     arr = np.asarray(data, dtype=float)
@@ -40,16 +81,7 @@ def _validate_numeric_series(series: pd.Series, column_name: str) -> None:
 
 def validate_features(data: pd.DataFrame) -> pd.DataFrame:
     """Validate and return a terrain feature DataFrame with required columns and ranges."""
-    if not isinstance(data, pd.DataFrame):
-        raise TypeError("Feature data must be provided as a pandas DataFrame.")
-    if data.empty:
-        raise ValueError("Feature data is empty; at least one terrain record is required.")
-
-    missing = [column for column in FEATURE_COLUMNS if column not in data.columns]
-    if missing:
-        raise ValueError(f"Missing required feature columns: {missing}")
-
-    validated = data.loc[:, FEATURE_COLUMNS].copy()
+    validated = _normalize_feature_frame(data)
     for column in FEATURE_COLUMNS:
         _validate_numeric_series(validated[column], column)
 
@@ -72,16 +104,7 @@ def validate_features(data: pd.DataFrame) -> pd.DataFrame:
 
 def select_features(data: pd.DataFrame) -> pd.DataFrame:
     """Return a DataFrame containing only the required terrain feature columns in order."""
-    if not isinstance(data, pd.DataFrame):
-        raise TypeError("Input data must be a pandas DataFrame.")
-    if data.empty:
-        raise ValueError("Feature data is empty; at least one terrain record is required.")
-
-    missing = [column for column in FEATURE_COLUMNS if column not in data.columns]
-    if missing:
-        raise ValueError(f"Missing required feature columns: {missing}")
-
-    selected = data.loc[:, FEATURE_COLUMNS].copy()
+    selected = _normalize_feature_frame(data)
     return validate_features(selected)
 
 

@@ -108,6 +108,21 @@ def test_input_immutability(valid_feature_frame):
     assert selected is not valid_feature_frame
 
 
+def test_model_feature_aliases_are_supported(valid_feature_frame):
+    model_frame = valid_feature_frame.rename(
+        columns={
+            "median_slope_deg": "slope_median_deg",
+            "roughness_m": "roughness_local_std_m",
+            "relief_m": "relief_p90_p10_m",
+            "steep_fraction": "steep_fraction_15deg",
+        }
+    )
+
+    result = select_features(model_frame)
+    assert list(result.columns) == FEATURE_COLUMNS
+    assert result.shape == valid_feature_frame.shape
+
+
 def test_robust_scaler_fitting_and_transform(valid_feature_frame):
     scaler = TerrainFeatureScaler()
     fitted = scaler.fit(valid_feature_frame)
