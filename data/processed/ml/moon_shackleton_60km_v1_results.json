@@ -1,0 +1,128 @@
+{
+  "target_site": "Shackleton south-pole 60 km terrain study",
+  "timestamp": "2026-11-14",
+  "top_analogs": [
+    {
+      "rank": 1,
+      "location_name": "Antarctic REMA 18_35 tile-centered polar ROI",
+      "profile_id": "earth_rema_18_35_60km_v1",
+      "latitude": -77.81689181335317,
+      "longitude": 160.20112364547506,
+      "similarity_score": 0.05178990400702164,
+      "metrics": {
+        "slope_match": 0.08658669726382535,
+        "relief_match": 0.21812800080674502,
+        "roughness_match": 0.09150140068994697,
+        "steep_fraction_match": 0.08615846300846378
+      },
+      "caveats": "Moon gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site. Scientific analog suitability unvalidated.; REMA v2 mosaic 32 m digital surface model; WGS84 ellipsoidal metre heights. May include snow/ice surfaces; not an exposed-rock mask. Center fixed at EPSG:3031 (450000,-1250000), tile midpoint before scoring. DOI 10.7910/DVN/EBW8UC; credit Howat et al. and PGC. Target exceeds Earth catalog range: slope_median_deg, relief_p90_p10_m, roughness_local_std_m, steep_fraction_15deg.",
+      "source_ids": [
+        "REMA_18_35_32M"
+      ]
+    },
+    {
+      "rank": 2,
+      "location_name": "Qaidam-area exploratory ROI",
+      "profile_id": "earth_n37e095_60km_v1",
+      "latitude": 37.5,
+      "longitude": 95.5,
+      "similarity_score": 0.0468922147178413,
+      "metrics": {
+        "slope_match": 0.08535875039213292,
+        "relief_match": 0.1942515296149744,
+        "roughness_match": 0.08917399574540456,
+        "steep_fraction_match": 0.06995082486647448
+      },
+      "caveats": "Moon gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site. Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified. Target exceeds Earth catalog range: slope_median_deg, relief_p90_p10_m, roughness_local_std_m, steep_fraction_15deg.",
+      "source_ids": [
+        "NASADEM_N37E095_HGT",
+        "NASADEM_N37E095_NUM",
+        "NASADEM_N37E095_SWB"
+      ]
+    },
+    {
+      "rank": 3,
+      "location_name": "Death Valley-area tile-centered ROI",
+      "profile_id": "earth_n36w117_60km_v1",
+      "latitude": 36.5,
+      "longitude": -116.5,
+      "similarity_score": 0.04678479634539155,
+      "metrics": {
+        "slope_match": 0.086019156904457,
+        "relief_match": 0.15532506349916606,
+        "roughness_match": 0.09201155312960836,
+        "steep_fraction_match": 0.07023041287526087
+      },
+      "caveats": "Moon gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site. Original Earth ZIP publisher checksum not independently verified. Target exceeds Earth catalog range: slope_median_deg, relief_p90_p10_m, roughness_local_std_m, steep_fraction_15deg.",
+      "source_ids": [
+        "NASADEM_N36W117_HGT",
+        "NASADEM_N36W117_NUM",
+        "NASADEM_N36W117_SWB"
+      ]
+    },
+    {
+      "rank": 4,
+      "location_name": "Mojave-area exploratory ROI",
+      "profile_id": "earth_n34w116_60km_v1",
+      "latitude": 34.5,
+      "longitude": -115.5,
+      "similarity_score": 0.045573560877852505,
+      "metrics": {
+        "slope_match": 0.0878953814262683,
+        "relief_match": 0.17222314894248733,
+        "roughness_match": 0.0915133058982227,
+        "steep_fraction_match": 0.06466009529048632
+      },
+      "caveats": "Moon gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site. Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified. Target exceeds Earth catalog range: slope_median_deg, relief_p90_p10_m, roughness_local_std_m, steep_fraction_15deg.",
+      "source_ids": [
+        "NASADEM_N34W116_HGT",
+        "NASADEM_N34W116_NUM",
+        "NASADEM_N34W116_SWB"
+      ]
+    },
+    {
+      "rank": 5,
+      "location_name": "ArcticDEM search candidate 28_30",
+      "profile_id": "earth_arctic_28_30_60km_v1",
+      "latitude": 75.01268271051367,
+      "longitude": -85.0302592718897,
+      "similarity_score": 0.045155212761238156,
+      "metrics": {
+        "slope_match": 0.08903489403902645,
+        "relief_match": 0.14038343190548797,
+        "roughness_match": 0.09273463994282746,
+        "steep_fraction_match": 0.06466009529048632
+      },
+      "caveats": "Moon gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site. Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed. Target exceeds Earth catalog range: slope_median_deg, relief_p90_p10_m, roughness_local_std_m, steep_fraction_15deg.",
+      "source_ids": [
+        "ARCTICDEM_28_30_32M",
+        "ARCTICDEM_28_30_32M_DATAMASK",
+        "ARCTICDEM_28_30_32M_MASK_UINT8"
+      ]
+    }
+  ],
+  "model_metadata": {
+    "metric": "euclidean",
+    "features": [
+      "slope_median_deg",
+      "relief_p90_p10_m",
+      "roughness_local_std_m",
+      "steep_fraction_15deg"
+    ],
+    "input_sha256": {
+      "earth_profiles.parquet": "1077523fc4e3b435e2acd35c350323be97946a1573605d5fe4ee3703e7a9403f",
+      "planetary_profiles.parquet": "894467db7c98c01109f0fbf3ca5476baac938b7e94c690601355886e23bd2b1e"
+    },
+    "target_profile_id": "moon_shackleton_60km_v1",
+    "target_source_ids": [
+      "LOLA_LDEM_875S_20M"
+    ],
+    "scientific_suitability_validated": false,
+    "features_outside_earth_range": [
+      "slope_median_deg",
+      "relief_p90_p10_m",
+      "roughness_local_std_m",
+      "steep_fraction_15deg"
+    ]
+  }
+}

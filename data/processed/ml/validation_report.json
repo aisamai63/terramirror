@@ -1,0 +1,483 @@
+{
+  "input_sha256": {
+    "earth_profiles.parquet": "1077523fc4e3b435e2acd35c350323be97946a1573605d5fe4ee3703e7a9403f",
+    "planetary_profiles.parquet": "894467db7c98c01109f0fbf3ca5476baac938b7e94c690601355886e23bd2b1e"
+  },
+  "contract": {
+    "roi_size_km": 60,
+    "common_grid_m": 1000,
+    "roughness_kernel_cells": 3,
+    "processing_version": "terrain_v1",
+    "features_version": "features_v1"
+  },
+  "evidence_checks": {
+    "numerical_evidence": {
+      "sha256": "deff9282e5e466ac4f7070e150caa663cf319c824950b528430ce88eba38653a",
+      "matched_profiles": 19
+    },
+    "processed_rasters": {
+      "manifest_sha256": "2af9dc74f49315c07a469e1890df56a74e14673ec3a0dce409e8a3d45bcfccee",
+      "matched_checksums": 19
+    }
+  },
+  "features": [
+    "slope_median_deg",
+    "relief_p90_p10_m",
+    "roughness_local_std_m",
+    "steep_fraction_15deg"
+  ],
+  "selected_metric": "euclidean",
+  "selection_reason": "Euclidean preserves standardized magnitudes; cosine retained as README baseline. No supervised quality comparison is available.",
+  "scientific_suitability_validated": false,
+  "earth_input_count": 16,
+  "earth_eligible_count": 15,
+  "excluded_earth": [
+    {
+      "profile_id": "earth_arctic_26_29_60km_v1",
+      "reasons": [
+        "qa_failed",
+        "valid_cell_fraction_below_0.90_or_invalid"
+      ]
+    }
+  ],
+  "excluded_targets": [],
+  "packages": {
+    "python": "3.11.14",
+    "numpy": "1.26.2",
+    "pandas": "2.1.4",
+    "scikit-learn": "1.3.2"
+  },
+  "feature_correlation": {
+    "slope_median_deg": {
+      "slope_median_deg": 1.0,
+      "relief_p90_p10_m": 0.7316416517143081,
+      "roughness_local_std_m": 0.9912465325138942,
+      "steep_fraction_15deg": 0.41052755961234505
+    },
+    "relief_p90_p10_m": {
+      "slope_median_deg": 0.7316416517143081,
+      "relief_p90_p10_m": 1.0,
+      "roughness_local_std_m": 0.71332767557251,
+      "steep_fraction_15deg": 0.7136759819516473
+    },
+    "roughness_local_std_m": {
+      "slope_median_deg": 0.9912465325138942,
+      "relief_p90_p10_m": 0.71332767557251,
+      "roughness_local_std_m": 1.0,
+      "steep_fraction_15deg": 0.4075390625047232
+    },
+    "steep_fraction_15deg": {
+      "slope_median_deg": 0.41052755961234505,
+      "relief_p90_p10_m": 0.7136759819516473,
+      "roughness_local_std_m": 0.4075390625047232,
+      "steep_fraction_15deg": 1.0
+    }
+  },
+  "limitations": [
+    "No independent relevance labels; no accuracy, precision@k or recall@k claim.",
+    "Slope and roughness are highly correlated; equal feature weighting is provisional.",
+    "60 km regional morphology does not resolve landing hazards or pit interiors.",
+    "Thermal, geology, resources and atmosphere are not scored."
+  ],
+  "targets": [
+    {
+      "profile_id": "mars_jezero_60km_v1",
+      "features_outside_earth_range": [],
+      "comparison": {
+        "cosine": [
+          {
+            "profile_id": "earth_n34w116_60km_v1",
+            "score": 0.9730648603398673
+          },
+          {
+            "profile_id": "earth_n36w117_60km_v1",
+            "score": 0.8508187382738748
+          },
+          {
+            "profile_id": "earth_n37e095_60km_v1",
+            "score": 0.8364277390545337
+          },
+          {
+            "profile_id": "earth_lava_beds_60km_v1",
+            "score": 0.7867156083620512
+          },
+          {
+            "profile_id": "earth_arctic_28_30_60km_v1",
+            "score": 0.7671189238868454
+          },
+          {
+            "profile_id": "earth_n24e010_60km_v1",
+            "score": 0.7113139952581442
+          },
+          {
+            "profile_id": "earth_rema_18_35_60km_v1",
+            "score": 0.5364229610910507
+          },
+          {
+            "profile_id": "earth_s24w069_60km_v1",
+            "score": 0.29506441868462663
+          },
+          {
+            "profile_id": "earth_s25e015_60km_v1",
+            "score": -0.5094830724708803
+          },
+          {
+            "profile_id": "earth_n13e040_60km_v1",
+            "score": -0.8396337182529905
+          },
+          {
+            "profile_id": "earth_n25e040_60km_v1",
+            "score": -0.9599058641237983
+          },
+          {
+            "profile_id": "earth_n22e058_60km_v1",
+            "score": -0.965605275995008
+          },
+          {
+            "profile_id": "earth_arctic_29_25_60km_v1",
+            "score": -0.9724162597208587
+          },
+          {
+            "profile_id": "earth_s20w068_60km_v1",
+            "score": -0.9814191600153183
+          },
+          {
+            "profile_id": "earth_s25e135_60km_v1",
+            "score": -0.9842208935108017
+          }
+        ],
+        "euclidean": [
+          {
+            "profile_id": "earth_n34w116_60km_v1",
+            "score": 0.6830866886843181
+          },
+          {
+            "profile_id": "earth_n36w117_60km_v1",
+            "score": 0.4862883874984648
+          },
+          {
+            "profile_id": "earth_n37e095_60km_v1",
+            "score": 0.45574000600486547
+          },
+          {
+            "profile_id": "earth_arctic_28_30_60km_v1",
+            "score": 0.4276468192636477
+          },
+          {
+            "profile_id": "earth_n24e010_60km_v1",
+            "score": 0.4135540122239194
+          },
+          {
+            "profile_id": "earth_lava_beds_60km_v1",
+            "score": 0.39806206456847526
+          },
+          {
+            "profile_id": "earth_s24w069_60km_v1",
+            "score": 0.3389482516433981
+          },
+          {
+            "profile_id": "earth_s25e015_60km_v1",
+            "score": 0.29478104109323916
+          },
+          {
+            "profile_id": "earth_n13e040_60km_v1",
+            "score": 0.27805202168855664
+          },
+          {
+            "profile_id": "earth_rema_18_35_60km_v1",
+            "score": 0.21403988940731572
+          },
+          {
+            "profile_id": "earth_n22e058_60km_v1",
+            "score": 0.2127156969212628
+          },
+          {
+            "profile_id": "earth_s20w068_60km_v1",
+            "score": 0.20980639172303134
+          },
+          {
+            "profile_id": "earth_n25e040_60km_v1",
+            "score": 0.20841532872966348
+          },
+          {
+            "profile_id": "earth_arctic_29_25_60km_v1",
+            "score": 0.19319110295443753
+          },
+          {
+            "profile_id": "earth_s25e135_60km_v1",
+            "score": 0.17482703125916882
+          }
+        ]
+      }
+    },
+    {
+      "profile_id": "moon_shackleton_60km_v1",
+      "features_outside_earth_range": [
+        "slope_median_deg",
+        "relief_p90_p10_m",
+        "roughness_local_std_m",
+        "steep_fraction_15deg"
+      ],
+      "comparison": {
+        "cosine": [
+          {
+            "profile_id": "earth_n36w117_60km_v1",
+            "score": 0.9712565703345898
+          },
+          {
+            "profile_id": "earth_rema_18_35_60km_v1",
+            "score": 0.885256971163306
+          },
+          {
+            "profile_id": "earth_n37e095_60km_v1",
+            "score": 0.8156920673316581
+          },
+          {
+            "profile_id": "earth_n34w116_60km_v1",
+            "score": 0.594444913012742
+          },
+          {
+            "profile_id": "earth_arctic_28_30_60km_v1",
+            "score": 0.5016589363086624
+          },
+          {
+            "profile_id": "earth_n24e010_60km_v1",
+            "score": 0.43408544401082094
+          },
+          {
+            "profile_id": "earth_lava_beds_60km_v1",
+            "score": 0.20712147124574654
+          },
+          {
+            "profile_id": "earth_s24w069_60km_v1",
+            "score": -0.15308587176550265
+          },
+          {
+            "profile_id": "earth_s25e015_60km_v1",
+            "score": -0.7740385373035749
+          },
+          {
+            "profile_id": "earth_s25e135_60km_v1",
+            "score": -0.8535458141375218
+          },
+          {
+            "profile_id": "earth_arctic_29_25_60km_v1",
+            "score": -0.8594654437017044
+          },
+          {
+            "profile_id": "earth_s20w068_60km_v1",
+            "score": -0.8678539848126499
+          },
+          {
+            "profile_id": "earth_n25e040_60km_v1",
+            "score": -0.8731687932712351
+          },
+          {
+            "profile_id": "earth_n22e058_60km_v1",
+            "score": -0.8979028808372772
+          },
+          {
+            "profile_id": "earth_n13e040_60km_v1",
+            "score": -0.9734351731542642
+          }
+        ],
+        "euclidean": [
+          {
+            "profile_id": "earth_rema_18_35_60km_v1",
+            "score": 0.05178990400702164
+          },
+          {
+            "profile_id": "earth_n37e095_60km_v1",
+            "score": 0.0468922147178413
+          },
+          {
+            "profile_id": "earth_n36w117_60km_v1",
+            "score": 0.04678479634539155
+          },
+          {
+            "profile_id": "earth_n34w116_60km_v1",
+            "score": 0.045573560877852505
+          },
+          {
+            "profile_id": "earth_arctic_28_30_60km_v1",
+            "score": 0.045155212761238156
+          },
+          {
+            "profile_id": "earth_n24e010_60km_v1",
+            "score": 0.044626682515245805
+          },
+          {
+            "profile_id": "earth_lava_beds_60km_v1",
+            "score": 0.04367268491802326
+          },
+          {
+            "profile_id": "earth_s24w069_60km_v1",
+            "score": 0.043109937664094176
+          },
+          {
+            "profile_id": "earth_s25e015_60km_v1",
+            "score": 0.042508388548626125
+          },
+          {
+            "profile_id": "earth_n13e040_60km_v1",
+            "score": 0.04222004600743093
+          },
+          {
+            "profile_id": "earth_s20w068_60km_v1",
+            "score": 0.040666050775665694
+          },
+          {
+            "profile_id": "earth_n22e058_60km_v1",
+            "score": 0.04066025330683535
+          },
+          {
+            "profile_id": "earth_n25e040_60km_v1",
+            "score": 0.040573894481527414
+          },
+          {
+            "profile_id": "earth_arctic_29_25_60km_v1",
+            "score": 0.04008386670212606
+          },
+          {
+            "profile_id": "earth_s25e135_60km_v1",
+            "score": 0.03936273748059282
+          }
+        ]
+      }
+    },
+    {
+      "profile_id": "moon_tranquillitatis_pit_60km_v1",
+      "features_outside_earth_range": [],
+      "comparison": {
+        "cosine": [
+          {
+            "profile_id": "earth_s25e135_60km_v1",
+            "score": 0.996004179090491
+          },
+          {
+            "profile_id": "earth_arctic_29_25_60km_v1",
+            "score": 0.9922942787004905
+          },
+          {
+            "profile_id": "earth_s20w068_60km_v1",
+            "score": 0.9896602026462796
+          },
+          {
+            "profile_id": "earth_n25e040_60km_v1",
+            "score": 0.9855097931943679
+          },
+          {
+            "profile_id": "earth_n22e058_60km_v1",
+            "score": 0.9843508740827696
+          },
+          {
+            "profile_id": "earth_n13e040_60km_v1",
+            "score": 0.8899435128936015
+          },
+          {
+            "profile_id": "earth_s25e015_60km_v1",
+            "score": 0.5640583126258352
+          },
+          {
+            "profile_id": "earth_s24w069_60km_v1",
+            "score": -0.30707533481609695
+          },
+          {
+            "profile_id": "earth_rema_18_35_60km_v1",
+            "score": -0.6178437488450956
+          },
+          {
+            "profile_id": "earth_n24e010_60km_v1",
+            "score": -0.6592497448039997
+          },
+          {
+            "profile_id": "earth_arctic_28_30_60km_v1",
+            "score": -0.7051607617993898
+          },
+          {
+            "profile_id": "earth_lava_beds_60km_v1",
+            "score": -0.7429494120379746
+          },
+          {
+            "profile_id": "earth_n36w117_60km_v1",
+            "score": -0.8788993229094306
+          },
+          {
+            "profile_id": "earth_n37e095_60km_v1",
+            "score": -0.8835866719390176
+          },
+          {
+            "profile_id": "earth_n34w116_60km_v1",
+            "score": -0.9491958234676591
+          }
+        ],
+        "euclidean": [
+          {
+            "profile_id": "earth_arctic_29_25_60km_v1",
+            "score": 0.7854520502522273
+          },
+          {
+            "profile_id": "earth_n25e040_60km_v1",
+            "score": 0.6627429119495848
+          },
+          {
+            "profile_id": "earth_s20w068_60km_v1",
+            "score": 0.6598237149705901
+          },
+          {
+            "profile_id": "earth_s25e135_60km_v1",
+            "score": 0.6376502323491486
+          },
+          {
+            "profile_id": "earth_n22e058_60km_v1",
+            "score": 0.6283050041242612
+          },
+          {
+            "profile_id": "earth_n13e040_60km_v1",
+            "score": 0.3790878308697891
+          },
+          {
+            "profile_id": "earth_s25e015_60km_v1",
+            "score": 0.3423990086251444
+          },
+          {
+            "profile_id": "earth_s24w069_60km_v1",
+            "score": 0.2745634371631322
+          },
+          {
+            "profile_id": "earth_lava_beds_60km_v1",
+            "score": 0.26465143318630147
+          },
+          {
+            "profile_id": "earth_n24e010_60km_v1",
+            "score": 0.22580406364710243
+          },
+          {
+            "profile_id": "earth_arctic_28_30_60km_v1",
+            "score": 0.2087353629933006
+          },
+          {
+            "profile_id": "earth_n36w117_60km_v1",
+            "score": 0.20838234782726434
+          },
+          {
+            "profile_id": "earth_n34w116_60km_v1",
+            "score": 0.19661803502621203
+          },
+          {
+            "profile_id": "earth_n37e095_60km_v1",
+            "score": 0.1916699563139428
+          },
+          {
+            "profile_id": "earth_rema_18_35_60km_v1",
+            "score": 0.14380032176603216
+          }
+        ]
+      }
+    }
+  ],
+  "artifact_sha256": "49683ff667edfb55d4fc77031410d447965eee0dc7464427c70d2263b897ea49",
+  "model_code_sha256": "258df7c068813204e27423c0cf6b82839d6bd3105d06b76e293dc735f01f8072",
+  "preparation_code_sha256": "74038568cc776eff329e1b9dd5b887de33fde90b8cde111c9dc19f7a7f1c2977",
+  "artifact_reload_verified": true
+}

@@ -1,0 +1,125 @@
+{
+  "target_site": "Jezero crater 60 km study ROI",
+  "timestamp": "2026-11-14",
+  "top_analogs": [
+    {
+      "rank": 1,
+      "location_name": "Mojave-area exploratory ROI",
+      "profile_id": "earth_n34w116_60km_v1",
+      "latitude": 34.5,
+      "longitude": -115.5,
+      "similarity_score": 0.6830866886843181,
+      "metrics": {
+        "slope_match": 0.891318887747249,
+        "relief_match": 0.9527760977222781,
+        "roughness_match": 0.8939559337285712,
+        "steep_fraction_match": 0.6999006323969862
+      },
+      "caveats": "Mars gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. MOLA includes interpolated bins; raster validity is not direct-shot coverage. Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.",
+      "source_ids": [
+        "NASADEM_N34W116_HGT",
+        "NASADEM_N34W116_NUM",
+        "NASADEM_N34W116_SWB"
+      ]
+    },
+    {
+      "rank": 2,
+      "location_name": "Death Valley-area tile-centered ROI",
+      "profile_id": "earth_n36w117_60km_v1",
+      "latitude": 36.5,
+      "longitude": -116.5,
+      "similarity_score": 0.4862883874984648,
+      "metrics": {
+        "slope_match": 0.7298800038594447,
+        "relief_match": 0.6320608709095482,
+        "roughness_match": 0.9438850048146408,
+        "steep_fraction_match": 0.5562139445913385
+      },
+      "caveats": "Mars gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. MOLA includes interpolated bins; raster validity is not direct-shot coverage. Original Earth ZIP publisher checksum not independently verified.",
+      "source_ids": [
+        "NASADEM_N36W117_HGT",
+        "NASADEM_N36W117_NUM",
+        "NASADEM_N36W117_SWB"
+      ]
+    },
+    {
+      "rank": 3,
+      "location_name": "Qaidam-area exploratory ROI",
+      "profile_id": "earth_n37e095_60km_v1",
+      "latitude": 37.5,
+      "longitude": 95.5,
+      "similarity_score": 0.45574000600486547,
+      "metrics": {
+        "slope_match": 0.6849167852091695,
+        "relief_match": 0.5854731381969602,
+        "roughness_match": 0.7116008404526517,
+        "steep_fraction_match": 0.5743964661595697
+      },
+      "caveats": "Mars gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. MOLA includes interpolated bins; raster validity is not direct-shot coverage. Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.",
+      "source_ids": [
+        "NASADEM_N37E095_HGT",
+        "NASADEM_N37E095_NUM",
+        "NASADEM_N37E095_SWB"
+      ]
+    },
+    {
+      "rank": 4,
+      "location_name": "ArcticDEM search candidate 28_30",
+      "profile_id": "earth_arctic_28_30_60km_v1",
+      "latitude": 75.01268271051367,
+      "longitude": -85.0302592718897,
+      "similarity_score": 0.4276468192636477,
+      "metrics": {
+        "slope_match": 0.9768700325068487,
+        "relief_match": 0.44104101498902487,
+        "roughness_match": 0.9753315752534246,
+        "steep_fraction_match": 0.6999006323969862
+      },
+      "caveats": "Mars gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. MOLA includes interpolated bins; raster validity is not direct-shot coverage. Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.",
+      "source_ids": [
+        "ARCTICDEM_28_30_32M",
+        "ARCTICDEM_28_30_32M_DATAMASK",
+        "ARCTICDEM_28_30_32M_MASK_UINT8"
+      ]
+    },
+    {
+      "rank": 5,
+      "location_name": "Central Sahara exploratory ROI",
+      "profile_id": "earth_n24e010_60km_v1",
+      "latitude": 24.5,
+      "longitude": 10.5,
+      "similarity_score": 0.4135540122239194,
+      "metrics": {
+        "slope_match": 0.6852421886154224,
+        "relief_match": 0.44033715278540764,
+        "roughness_match": 0.974990246615973,
+        "steep_fraction_match": 0.6999006323969862
+      },
+      "caveats": "Mars gravity and atmosphere differ from Earth. Regional terrain comparison only; scientific analog suitability unvalidated. MOLA includes interpolated bins; raster validity is not direct-shot coverage. Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.",
+      "source_ids": [
+        "NASADEM_N24E010_HGT",
+        "NASADEM_N24E010_NUM",
+        "NASADEM_N24E010_SWB"
+      ]
+    }
+  ],
+  "model_metadata": {
+    "metric": "euclidean",
+    "features": [
+      "slope_median_deg",
+      "relief_p90_p10_m",
+      "roughness_local_std_m",
+      "steep_fraction_15deg"
+    ],
+    "input_sha256": {
+      "earth_profiles.parquet": "1077523fc4e3b435e2acd35c350323be97946a1573605d5fe4ee3703e7a9403f",
+      "planetary_profiles.parquet": "894467db7c98c01109f0fbf3ca5476baac938b7e94c690601355886e23bd2b1e"
+    },
+    "target_profile_id": "mars_jezero_60km_v1",
+    "target_source_ids": [
+      "MOLA_MEGT44N000HB"
+    ],
+    "scientific_suitability_validated": false,
+    "features_outside_earth_range": []
+  }
+}
