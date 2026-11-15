@@ -1,5 +1,7 @@
 # ML model preparation
 
+> **Historical regional-model document.** This file describes an earlier standardized-feature baseline. The current detailed TerraMirror application uses the PyTorch convolutional autoencoder and hybrid retrieval described in [README.md](README.md) and [docs/MODEL_CARD_AND_EVALUATION.md](docs/MODEL_CARD_AND_EVALUATION.md). The numerical status below must not be presented as current detailed-model performance.
+
 Use **StandardScaler + cosine similarity** as the README's baseline. This is
 unsupervised analog retrieval: no classifier labels or pretrained weights are
 required. `src/model.py` implements fitting on Earth reference patches and ranking
